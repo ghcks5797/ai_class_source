@@ -8,10 +8,27 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.print.attribute.standard.RequestingUserName;
+import java.util.List;
 
 @Controller
 @RequestMapping("/member")
 public class MemberController {
+
+    /**
+     * MemberController에서 공통으로 공유할수 있는 속성
+     *
+     * @return
+     */
+
+    @ModelAttribute("commonTitle")
+    public String commonTitle() {
+        return "회원 공통 제목...";
+    }
+
+    @ModelAttribute("hobbies")
+    public List<String> hobbise() {
+        return List.of("취미1", "취미2", "취미3");
+    }
 
     @GetMapping("/join")
     public String join(@ModelAttribute RequestJoin form) {

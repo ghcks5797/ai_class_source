@@ -1,2 +1,2 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<h1>회사 소개</h1>
+<h1>로그인</h1>

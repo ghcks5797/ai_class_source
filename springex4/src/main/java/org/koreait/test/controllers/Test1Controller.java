@@ -1,6 +1,5 @@
-package org.koreait.global.test.controllers;
+package org.koreait.test.controllers;
 
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -24,6 +23,7 @@ public class Test1Controller {
     private HttpSession session;
 
 
+
     @ResponseBody
     @GetMapping("/ex01")
     public void exam01(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
@@ -31,12 +31,11 @@ public class Test1Controller {
         System.out.println(URI);
 
         System.out.printf("request: %s, response: %s, session: %s%n", request, response, session);
-
     }
 
     @ResponseBody
     @GetMapping("/ex02")
-    public void exam02(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+    public void exam02() {
         String URI = request.getRequestURI();
         System.out.println(URI);
 

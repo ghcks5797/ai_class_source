@@ -23,4 +23,3 @@ public class Member {
     @Column("modDt")
     private LocalDateTime modDt;
 }
-
